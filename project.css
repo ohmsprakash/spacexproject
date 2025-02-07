@@ -91,35 +91,35 @@ a:hover::after {
   color: black;
 }
 .img1 {
-  background-image: url("/assests/starlink1.jpg");
+  background-image: url("assests/starlink1.jpg");
   height: 100vh;
   background-size: 100% 100%;
   display: flex;
   align-items: end;
 }
 .img2 {
-  background-image: url("/assests/nrol.jpg");
+  background-image: url("assests/nrol.jpg");
   height: 100vh;
   background-size: 100% 100%;
   display: flex;
   align-items: end;
 }
 .img3 {
-  background-image: url("/assests/starlink2.jpg");
+  background-image: url("assests/starlink2.jpg");
   height: 100vh;
   background-size: 100% 100%;
   display: flex;
   align-items: end;
 }
 .img4 {
-  background-image: url("/assests/Evasuit.jpg");
+  background-image: url("assests/Evasuit.jpg");
   height: 100vh;
   background-size: 100% 100%;
   display: flex;
   align-items: end;
 }
 .img5 {
-  background-image: url("/assests/makelife.jpg");
+  background-image: url("assests/makelife.jpg");
   height: 100vh;
   background-size: 100% 100%;
   display: flex;
