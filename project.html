@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX</title>
+    <link rel="icon" type="image/x-icon" href="/assests/favicon.ico">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Agu+Display&family=Barrio&family=Butcherman&family=Dancing+Script:wght@400..700&family=Danfo&family=Doto:wght@100..900&family=Foldit:wght@100..900&family=Jacquard+24+Charted&family=Libre+Barcode+EAN13+Text&family=Major+Mono+Display&family=Moo+Lah+Lah&family=Oi&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&family=Puppies+Play&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+3D&family=Rubik+80s+Fade&family=Rubik+Gemstones&family=Rubik+Glitch+Pop&family=Stick+No+Bills:wght@200..800&family=Wavefont:wght@4..1000&family=Yuji+Mai&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<div>
+     <header >
+        <!-- <img src="/assests/spacexlogo.jpg" alt="" class="logo"> -->
+        <svg version="1.1" x="0px" y="0px" viewbox="0 0 400 50" aria-hidden="true">
+            <title>SpaceX Logo</title>
+            <g class="letter_s">
+              <path class="fill-white" d="M37.5,30.5H10.9v-6.6h34.3c-0.9-2.8-3.8-5.4-8.9-5.4H11.4c-5.7,0-9,2.1-9,6.7v4.9c0,4,3.4,6.3,8.4,6.3h26.9v7H1.5
+              c0.9,3.8,3.8,5.8,9,5.8h27.1c5.7,0,8.5-2.2,8.5-6.9v-4.9C46.1,33.1,42.8,30.8,37.5,30.5z"/>
+            </g>
+            <g class="letter_p">
+              <path class="fill-white" d="M91.8,18.6H59v30.7h9.3V37.5h24.2c6.7,0,10.4-2.3,10.4-7.7v-3.4C102.8,21.4,98.6,18.6,91.8,18.6z M94.8,28.4
+              c0,2.2-0.4,3.4-4,3.4H68.3l0.1-8h22c4,0,4.5,1.2,4.5,3.3V28.4z"/>
+            </g>
+            <g class="letter_a">
+              <polygon class="fill-white" points="129.9,17.3 124.3,24.2 133.8,37.3 114,37.3 109.1,42.5 137.7,42.5 142.6,49.3 153.6,49.3 	"/>
+            </g>
+            <g class="letter_c">
+              <path class="fill-white" d="M171.4,23.9h34.8c-0.9-3.6-4.4-5.4-9.4-5.4h-26c-4.5,0-8.8,1.8-8.8,6.7v17.2c0,4.9,4.3,6.7,8.8,6.7h26.3
+              c6,0,8.1-1.7,9.1-5.8h-34.8V23.9z"/>
+            </g>
+            <g class="letter_e">
+              <polygon class="fill-white" points="228.3,43.5 228.3,34.1 247,34.1 247,28.9 218.9,28.9 218.9,49.3 260.4,49.3 260.4,43.5 	"/>
+              <rect class="fill-white" x="219.9" y="18.6" width="41.9" height="5.4"/>
+            </g>
+            <g class="letter_x">
+              <path class="fill-white" d="M287.6,18.6H273l17.2,12.6c2.5-1.7,5.4-3.5,8-5L287.6,18.6z"/>
+              <path class="fill-white" d="M308.8,34.3c-2.5,1.7-5,3.6-7.4,5.4l13,9.5h14.7L308.8,34.3z"/>
+            </g>
+            <g class="letter_swoosh">
+              <path class="fill-white" d="M399,0.7c-80,4.6-117,38.8-125.3,46.9l-1.7,1.6h14.8C326.8,9.1,384.3,2,399,0.7L399,0.7z"/>
+            </g>
+          </svg> 
+        <nav style="margin-top: 20px;">
+            <ul>    
+              <li><a href="#falcon-9">FALCON 9</a></li>
+                <li><a href="#falcon-heavy">FALCON HEAVY</a></li>
+                <li><a href="#dragon">DRAGON</a></li>
+                <li><a href="#starship">STARSHIP</a></li>
+                <!-- <li><a href="#">HUMAN SPACEFLIGHT</a></li>
+                <li><a href="#">RIDESHARE</a></li>
+                <li><a href="#">STARSHIELD</a></li>
+                <li><a href="#">STARLINK</a></li> -->
+            </ul>
+        </nav>
+        <i class="bi bi-list" style="color: white;"></i>
+    </header>
+    <main>
+        <video width="100%" height="100%" autoplay loop muted>
+            <source src="assests/video.mp4" type="video/mp4">
+        </video>
+        <div data-aos="fade-up" class="parag">
+            <h3>UPCOMING LAUNCH</h3>
+            <h1>STARSHIP'S SEVENTH</h1>
+            <h1>FLIGHT TEST</h1>
+            <button>REWATCH</button>
+        </div>
+        <div class="img1">
+            <div data-aos="fade-up" class="para">
+                <h3>RECENT LAUNCH</h3>
+                <h1>STARTLINK MISSION</h1>
+                <button class="para-button">REWATCH</button>
+            </div>
+        </div>
+        <div class="img2">
+            <div data-aos="fade-up" class="para">
+                <h3>RECENT LAUNCH</h3>
+                <h1>NROL-153 MISSION</h1>
+                <button class="para-button">REWATCH</button>
+            </div>
+        </div>
+        <div class="img3">
+            <div data-aos="fade-up" class="para">
+                <h3>RECENT LAUNCH</h3>
+                <h1>STARTLINK MISSION</h1>
+                <button class="para-button">REWATCH</button>
+            </div>
+        </div>
+        <div class="img4">
+            <div data-aos="fade-up" class="para">
+                <h3>ADVANCING HUMAN</h3>
+                <h1>SPACEFLIGHT</h1>
+                <button class="para-button">LEARN MORE</button>
+            </div>
+        </div>
+        <div class="img5">
+            <div data-aos="fade-up" class="para">
+                <h3>TO MAKE LIFE</h3>
+                <h1>MULTIPLANETARY</h1>
+                <button class="para-button">LEARN MORE</button>
+            </div>
+        </div>
+    </main>
+    
+
+  <div id="falcon-9">
+
+      <div class="main-image" style="background-image: url('/assests/rocket.jpg');">
+          <div data-aos="fade-up" class="para">
+              <h1 style="font-weight: 600;font-size: 80px;">FALCON 9</h1>
+              <h3>FIRST ORBITAL CLASS ROCKET CAPABLE OF REFLIGHT</h3>
+          </div>
+      </div>
+  </div>
+  <!-- <div class="count">
+  <div class="card">
+      <div class="loader">
+        <p>loading</p>
+        <div class="words">
+          <span class="word">427</span>
+          <span class="word">410</span>
+          <span class="word">396</span>
+          <span class="word">383</span>
+          <span class="word">378</span>
+          <span class="word">362</span>
+          <span class="word">357</span>
+          <span class="word">344</span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="loader">
+        <p>loading</p>
+        <div class="words">
+          <span class="word">427</span>
+          <span class="word">410</span>
+          <span class="word">396</span>
+          <span class="word">383</span>
+          <span class="word">378</span>
+          <span class="word">362</span>
+          <span class="word">357</span>
+          <span class="word">344</span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="loader">
+        <p>loading</p>
+        <div class="words">
+          <span class="word">427</span>
+          <span class="word">410</span>
+          <span class="word">396</span>
+          <span class="word">383</span>
+          <span class="word">378</span>
+          <span class="word">362</span>
+          <span class="word">357</span>
+          <span class="word">344</span>
+        </div>
+      </div>
+    </div>
+  </div>   -->
+
+<div style="width: 100%; background-color: black;">
+  <div class="container">
+    <div class="textBox">
+        <ul>
+            <li>431</li>
+            <li>561</li>
+            <li>764</li>
+            <li>184</li>
+            <li>248</li>
+            <li>154</li>
+        </ul>
+    </div>
+    <div class="textBox">
+        <ul>
+            <li>386</li>
+            <li>576</li>
+            <li>564</li>
+            <li>884</li>
+            <li>348</li>
+            <li>659</li>
+        </ul>
+    </div>
+    <div class="textBox">
+        <ul>
+            <li>360</li>
+            <li>916</li>
+            <li>564</li>
+            <li>484</li>
+            <li>548</li>
+            <li>468</li>
+        </ul>
+    </div>
+</div>
+<div style="display: flex; justify-content: space-evenly;">
+      <h3 style="color: white;">COMPLETED MISSIONS</h3>
+      <h3 style="color: white;">TOTAL LANDINGS</h3>
+      <h3 style="color: white;">TOTAL REFLIGHTS</h3>
+</div>
+</div>    
+
+  <!-- <div class="carousel">
+    <div class="carousel-images">
+        <img src="assests/overview.jpg" alt="Slide 1">
+        <img src="assests/firststage.jpg" alt="Slide 2">
+        <img src="assests/interstage.jpg" alt="Slide 3">
+        <img src="assests/secondstage.jpg" alt="Slide 4">
+        <img src="assests/payload.png" alt="Slide 5">
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="indicators"></div>
+    
+</div> -->
+
+<div class="carousel-container" id="carousel1">
+  <div class="carousel-slides">
+    <div class="slide">
+      <img src="assests/falcon9-overview.jpg" alt="Slide 1" />
+      <div class="caption">
+        <h3>FALCON 9</h3>
+        <h1>Overview</h1>
+            <div style="display: flex;justify-content: space-between;">
+              <p>HEIGHT</p>
+              <p>70m / 229.6 ft</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>WIDTH</p>
+              <p>12.2m / 39.9 ft</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>MASS</p>
+              <p>1,420,788kg / 3,125,735 lb</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>PAYLOAD TO LEO</p>
+              <p>68,800 kg / 140,860 lb</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>PAYLOAD TO GTO</p>
+              <p>26,700 kg / 58,860 lb</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>PAYLOAD TO MARS</p>
+              <p>16,800 kg / 37,040 lb</p>
+            </div>
+          
+      </div>
+    </div>
+    <div class="slide">
+      <img src="assests/falcon9-firststage.jpg" alt="Slide 2" />
+      <div class="caption">
+        <div style="margin-bottom: 5%;">
+          <h3>FALCON HEAVY</h3>
+          <h1>FIRST STAGE</h1>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <h5>OVERVIEW  |</h5>
+          <h5>ENGINES  |</h5>
+          <h5>LANDING LEGS</h5>
+        </div>
+        <p>Three cores make up the first stage of Falcon Heavy. The side cores, or boosters, are connected on the nosecone, the interstage, and on the octaweb. Shortly after liftoff the center core engines are throttled down. After the side cores separate, the center core engines throttle back up to full thrust.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="assests/falcon9-interstage.jpg" alt="Slide 3" />
+      <div class="caption">
+        <h3>FALCON HEAVY</h3>
+        <h1>INTERSTAGE</h1>
+        <p>The interstage is a composite structure that connects the center core on the first stage and second stages and holds the release and separation system.</p>
+        <h4>GRID FINS</h4>
+        <p>Falcon Heavy is equipped with 12 hypersonic grid fins, four on each booster, positioned at the base of the interstage or nosecone which orients by moving the center of pressure during reentry.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="assests/falcon9-secondstage.jpg" alt="Slide 4" />
+      <div class="caption">
+        <h3>FALCON HEAVY</h3>
+        <h1>SECOND STAGE</h1>
+        <p>Falcon Heavy draws upon Falcon 9’s proven design, which minimizes stage separation events and maximizes reliability. The second-stage Merlin Vacuum Engine delivers the rocket’s payload to orbit after the main engines cut off and the first-stage cores separate.</p>
+        <div style="display: flex;justify-content: space-between;">
+          <p>NUMBER OF ENGINES</p>
+          <p>1 vacuum</p>
+        </div>
+        <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+        <div style="display: flex;justify-content: space-between;">
+          <p>BURN TIME</p>
+          <p>397 sec</p>
+        </div>
+        <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+        <div style="display: flex;justify-content: space-between;">
+          <p>THRUST</p>
+          <p>981 kN / 220,500 lbf</p>
+        </div>
+        <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="assests/falcon9-payload.png" alt="Slide 5" />
+      <div class="caption">
+        <h3>FALCON 9</h3>
+        <h1>PAYLOAD</h1>
+        <div style="display: flex; gap: 10px;">
+          <h5>FAIRING  |</h5>
+          <h5>DRAGON </h5>
+        </div>
+        <p>Made of a carbon composite material, the fairing protects satellites on their way to orbit. SpaceX is recovering fairings for reuse on future missions.</p>
+        <div style="display: flex;justify-content: space-between;">
+          <p>HEIGHT</p>
+          <p>13.1m / 43 ft</p>
+        </div>
+        <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+        <div style="display: flex;justify-content: space-between;">
+          <p>DIAMETER</p>
+          <p>5.2m / 17.1 ft</p>
+        </div>
+        <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+      </div>
+    </div>
+  </div>
+  <!-- <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+  <button class="next" onclick="moveSlide(1)">&#10095;</button> -->
+
+        <button class="prev" onclick="moveSlide('carousel1', -1)">&#10094;</button>
+        <button class="next" onclick="moveSlide('carousel1', 1)">&#10095;</button>
+        <div class="indicators"></div>
+</div>
+
+<div class="launch-services">
+  <div class="vertical-line"></div>
+  <div>
+    <p style="color: grey;">For information about our lauch service, contact sales@spacex.com</p>
+  </div>
+  <div style="display: flex;gap:20px;">
+    <button class="para-button" style="padding:10px;">DOWNLOAD USER'S GUIDE</button>
+    <button class="para-button" style="padding:10px;">CAPABILITIES AND SERVICES</button>
+  </div>
+</div>
+
+  </div>
+
+   
+  <div id="falcon-heavy">
+
+    <div class="main-image" style="background-image: url('/assests/falcon-heavy.jpg');">
+      <div data-aos="fade-up" class="para">
+          <h1 style="font-weight: 600;font-size: 80px;">FALCON HEAVY</h1>
+          <h3>OVER 5 MILLION LBS OF THRUST</h3>
+      </div>
+    </div>
+    
+    <div style="width: 100%; background-color: black;">
+      <div class="container">
+        <div class="textBox">
+            <ul>
+                <li>11</li>
+                <li>51</li>
+                <li>64</li>
+                <li>18</li>
+                <li>24</li>
+                <li>14</li>
+            </ul>
+        </div>
+        <div class="textBox">
+            <ul>
+                <li>19</li>
+                <li>56</li>
+                <li>56</li>
+                <li>84</li>
+                <li>34</li>
+                <li>65</li>
+            </ul>
+        </div>
+        <div class="textBox">
+            <ul>
+                <li>16</li>
+                <li>26</li>
+                <li>56</li>
+                <li>84</li>
+                <li>58</li>
+                <li>68</li>
+            </ul>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: space-evenly;">
+          <h3 style="color: white;">COMPLETED MISSIONS</h3>
+          <h3 style="color: white;">TOTAL LANDINGS</h3>
+          <h3 style="color: white;">TOTAL REFLIGHTS</h3>
+    </div>
+    </div>    
+    
+
+    <div class="carousel-container" id="carousel2">
+      <div class="carousel-slides">
+        <div class="slide">
+          <img src="assests/falcon9-overview.jpg" alt="Slide 1" />
+          <div class="caption">
+            <h3>FALCON 9</h3>
+            <h1>Overview</h1>
+                <div style="display: flex;justify-content: space-between;">
+                  <p>HEIGHT</p>
+                  <p>70m / 229.6 ft</p>
+                </div>
+                <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+                <div style="display: flex;justify-content: space-between;">
+                  <p>WIDTH</p>
+                  <p>12.2m / 39.9 ft</p>
+                </div>
+                <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+                <div style="display: flex;justify-content: space-between;">
+                  <p>MASS</p>
+                  <p>1,420,788kg / 3,125,735 lb</p>
+                </div>
+                <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+                <div style="display: flex;justify-content: space-between;">
+                  <p>PAYLOAD TO LEO</p>
+                  <p>68,800 kg / 140,860 lb</p>
+                </div>
+                <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+                <div style="display: flex;justify-content: space-between;">
+                  <p>PAYLOAD TO GTO</p>
+                  <p>26,700 kg / 58,860 lb</p>
+                </div>
+                <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+                <div style="display: flex;justify-content: space-between;">
+                  <p>PAYLOAD TO MARS</p>
+                  <p>16,800 kg / 37,040 lb</p>
+                </div>
+              
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assests/falcon9-firststage.jpg" alt="Slide 2" />
+          <div class="caption">
+            <div style="margin-bottom: 5%;">
+              <h3>FALCON HEAVY</h3>
+              <h1>FIRST STAGE</h1>
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <h5>OVERVIEW  |</h5>
+              <h5>ENGINES  |</h5>
+              <h5>LANDING LEGS</h5>
+            </div>
+            <p>Three cores make up the first stage of Falcon Heavy. The side cores, or boosters, are connected on the nosecone, the interstage, and on the octaweb. Shortly after liftoff the center core engines are throttled down. After the side cores separate, the center core engines throttle back up to full thrust.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assests/falcon9-interstage.jpg" alt="Slide 3" />
+          <div class="caption">
+            <h3>FALCON HEAVY</h3>
+            <h1>INTERSTAGE</h1>
+            <p>The interstage is a composite structure that connects the center core on the first stage and second stages and holds the release and separation system.</p>
+            <h4>GRID FINS</h4>
+            <p>Falcon Heavy is equipped with 12 hypersonic grid fins, four on each booster, positioned at the base of the interstage or nosecone which orients by moving the center of pressure during reentry.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assests/falcon9-secondstage.jpg" alt="Slide 4" />
+          <div class="caption">
+            <h3>FALCON HEAVY</h3>
+            <h1>SECOND STAGE</h1>
+            <p>Falcon Heavy draws upon Falcon 9’s proven design, which minimizes stage separation events and maximizes reliability. The second-stage Merlin Vacuum Engine delivers the rocket’s payload to orbit after the main engines cut off and the first-stage cores separate.</p>
+            <div style="display: flex;justify-content: space-between;">
+              <p>NUMBER OF ENGINES</p>
+              <p>1 vacuum</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>BURN TIME</p>
+              <p>397 sec</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>THRUST</p>
+              <p>981 kN / 220,500 lbf</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assests/falcon9-payload.png" alt="Slide 5" />
+          <div class="caption">
+            <h3>FALCON 9</h3>
+            <h1>PAYLOAD</h1>
+            <div style="display: flex; gap: 10px;">
+              <h5>FAIRING  |</h5>
+              <h5>DRAGON </h5>
+            </div>
+            <p>Made of a carbon composite material, the fairing protects satellites on their way to orbit. SpaceX is recovering fairings for reuse on future missions.</p>
+            <div style="display: flex;justify-content: space-between;">
+              <p>HEIGHT</p>
+              <p>13.1m / 43 ft</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>DIAMETER</p>
+              <p>5.2m / 17.1 ft</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+          </div>
+        </div>
+      </div>
+      <!-- <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button> -->
+
+      <button class="prev" onclick="moveSlide('carousel2', -1)">&#10094;</button>
+        <button class="next" onclick="moveSlide('carousel2', 1)">&#10095;</button>
+        <div class="indicators"></div>
+    </div>
+
+
+    <div class="launch-services">
+      <div class="vertical-line"></div>
+      <div>
+        <p style="color: grey;">For information about our lauch service, contact sales@spacex.com</p>
+      </div>
+      <div style="display: flex;gap:20px;">
+        <button class="para-button" style="padding:10px;">DOWNLOAD USER'S GUIDE</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="dragon">
+
+    <div class="main-image" style="background-image: url('/assests/dragon.jpg');">
+      <div data-aos="fade-up" class="para">
+          <h1>DRAGON</h1>
+          <h3>SENDING HUMANS AND CARGO INTO SPACE</h3>
+      </div>
+    </div>
+    
+    <div style="width: 100%; background-color: black;">
+      <div class="container">
+        <div class="textBox">
+            <ul>
+                <li>49</li>
+                <li>51</li>
+                <li>76</li>
+                <li>14</li>
+                <li>24</li>
+                <li>14</li>
+            </ul>
+        </div>
+        <div class="textBox">
+            <ul>
+                <li>44</li>
+                <li>56</li>
+                <li>64</li>
+                <li>84</li>
+                <li>48</li>
+                <li>59</li>
+            </ul>
+        </div>
+        <div class="textBox">
+            <ul>
+                <li>28</li>
+                <li>16</li>
+                <li>54</li>
+                <li>44</li>
+                <li>48</li>
+                <li>48</li>
+            </ul>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: space-evenly;">
+          <h3 style="color: white;">COMPLETED MISSIONS</h3>
+          <h3 style="color: white;">VISITS TO ISS</h3>
+          <h3 style="color: white;">TOTAL REFLIGHTS</h3>
+    </div>
+    </div>    
+
+    <div class="carousel-container" id="carousel3">
+      <div class="carousel-slides">
+        <div class="slide">
+          <!-- <img src="assests/falcon9-overview.jpg" alt="Slide 1" /> -->
+           <video width="100%" autoplay loop muted>
+            <source src="assests/DragonTrunk_Animation_Render_Desktop_2.mp4" type="video/mp4">
+           </video>
+          <div class="caption" style="display: flex;flex-direction: column;gap:10px;bottom: 30%;">
+            <div>
+              <h3>DRAGON</h3>
+              <h1>OVERVIEW</h1>
+            </div>
+            <div>
+              <div style="display: flex;justify-content: space-between;">
+                <p>HEIGHT</p>
+                <p>8.1 m / 26.7 ft</p>
+              </div>
+              <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+              <div style="display: flex;justify-content: space-between;">
+                <p>DIAMETER</p>
+                <p>4 m / 13 ft</p>
+              </div>
+              <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+              <div style="display: flex;justify-content: space-between;">
+                <p>SPACECRAFT VOLUME</p>
+                <p>9.3 m<sup>3</sup> / 328 ft<sup>3</sup></p>
+              </div>
+              <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+              <div style="display: flex;justify-content: space-between;">
+                <p>TRUNCK VOLUME</p>
+                <p>37 m<sup>3</sup> / 1300 ft<sup>3</sup></p>
+              </div>
+              <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+              <div style="display: flex;justify-content: space-between;">
+                <p>LAUNCH PAYLOAD MASS</p>
+                <p>6,000 kg / 13,228 lbs</p>
+              </div>
+              <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+              <div style="display: flex;justify-content: space-between;">
+                <p>RETURN PAYLOAD MASS</p>
+                <p>3,000 kg / 6,614 lbs</p>
+              </div>
+            </div>
+              
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assests/falcon9-secondstage.jpg" alt="Slide 2" />
+          <div class="caption" style="display: flex;flex-direction: column;gap:10px;bottom:35%">
+           <div>
+            <h3>DRAGON</h3>
+            <h1>TRUNK</h1>
+           </div>
+            <p>Dragon’s trunk not only carries unpressurized cargo but also supports the spacecraft during ascent. One half of the trunk is covered in solar panels that provide power to Dragon during flight and while on-station. The trunk remains attached to Dragon until shortly before reentry into Earth’s atmosphere.</p>
+            <div style="display: flex;justify-content: space-between;">
+              <p>VOLUME</p>
+              <p>37 m<sup>3</sup> / 1300 ft<sup>3</sup></p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assests/falcon9-payload.png" alt="Slide 3" />
+          <div class="caption" style="width: 35%; display: flex;flex-direction: column;gap:10px;bottom:35%">
+            <div>
+              <h3>DRAGON</h3>
+              <h1>SPACECRAFT</h1>
+            </div>
+            <div style="display: flex;gap: 10px;">
+              <h5>OVERVIEW |</h5>
+              <h5>LAUNCH ABORT |</h5>
+              <h5>ATTITUDE CONTROL</h5>
+            </div>
+            <p>The Dragon spacecraft, also known as the pressurized section, allows for the transport of people as well as environmentally sensitive cargo. Dragon is equipped with Draco thrusters that allow Dragon to maneuver while on orbit and 8 SuperDracos that power the spacecraft’s launch escape system.</p>
+            <div style="display: flex;justify-content: space-between;">
+              <p>VOLUME</p>
+              <p>9.3 m<sup>3</sup> / 328 ft<sup>3</sup></p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+          </div>
+        </div>
+      </div>
+      <!-- <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button> -->
+
+      <button class="prev" onclick="moveSlide('carousel3', -1)">&#10094;</button>
+        <button class="next" onclick="moveSlide('carousel3', 1)">&#10095;</button>
+        <div class="indicators"></div>
+    </div> 
+
+    <div id="starship">
+
+      <div class="main-image" style="background-image: url('/assests/starship.jpg');">
+          <div data-aos="fade-up" class="para">
+              <h1 style="font-weight: 600;font-size: 80px;">STARSHIP</h1>
+              <h3>FIRST ORBITAL CLASS ROCKET CAPABLE OF REFLIGHT</h3>
+          </div>
+      </div>
+  </div>
+
+
+<div class="carousel-container" id="carousel4">
+  <div class="carousel-slides">
+    <div class="slide">
+      <!-- <img src="assests/falcon9-overview.jpg" alt="Slide 1" /> -->
+       <video width="100%" autoplay loop muted>
+         <source src="assests/Starship.mp4">
+       </video>
+      <div class="caption" style="top:10%;">
+        <h1>STARSHIP OVERVIEW</h1>
+        <p>SpaceX’s Starship spacecraft and Super Heavy rocket – collectively referred to as Starship – represent a fully reusable transportation system designed to carry both crew and cargo to Earth orbit, the Moon, Mars and beyond. Starship is the world’s most powerful launch vehicle ever developed, capable of carrying up to 150 metric tonnes fully reusable and 250 metric tonnes expendable.</p>
+            <div style="display: flex;justify-content: space-between;">
+              <p>HEIGHT</p>
+              <p>123 m / 403 ft</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>DIAMETER</p>
+              <p>9 m / 29.5 ft</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>PAYLOAD CAPACITY</p>
+              <p>100-150 t (fully resuable)</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="assests/Starship_Render.png" alt="Slide 2" />
+      <div class="caption" style="top:10%;">
+        <h3>FALCON 9</h3>
+        <h1>Overview</h1>
+            <div style="display: flex;justify-content: space-between;">
+              <p>HEIGHT</p>
+              <p>52 m / 171 ft</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>DIAMETER</p>
+              <p>9 m / 29.5 ft</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>PROPELLANT CAPACITY</p>
+              <p>1,500 / 3.3 Mlb</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>TRUST</p>
+              <p>1,500 tf / 3.3 Mlbf</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+            <div style="display: flex;justify-content: space-between;">
+              <p>PAYLOAD CAPACITY</p>
+              <p>100 - 150 t</p>
+            </div>
+            <div style="border: 1px solid grey;margin-bottom: 10px;"></div>     
+      </div>
+    </div>
+    <div class="slide">
+      <img src="assests/SuperHeavy.jpg" alt="Slide 3" />
+      <div class="caption" style="top:10%;">
+        <h1>SUPER HEAVY</h1>
+        <p>Super Heavy is the first stage, or booster, of the Starship launch system. Powered by 33 Raptor engines using sub-cooled liquid methane (CH4) and liquid oxygen (LOX), Super Heavy is fully reusable and will re-enter Earth’s atmosphere to land back at the launch site. </p>
+        <div style="display: flex;justify-content: space-between;">
+          <p>HEIGHT</p>
+          <p>71 m / 232 ft</p>
+        </div>
+        <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+        <div style="display: flex;justify-content: space-between;">
+          <p>DIAMETER</p>
+          <p>9 m / 29.5 ft</p>
+        </div>
+        <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+        <div style="display: flex;justify-content: space-between;">
+          <p>PROPELLANT CAPACITY</p>
+          <p>3,400 t / 7.5 Mlb</p>
+        </div>
+        <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+        <div style="display: flex;justify-content: space-between;">
+          <p>THRUST</p>
+          <p>7,590 ft / 16.7 Mlbf</p>
+        </div>
+        <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="assests/Raptor.jpg" alt="Slide 4" />
+      <div class="caption" style="bottom: 25%;">
+        <h1>RAPTOR ENGINES</h1>
+        <div style="display: flex; gap: 10px;">
+          <h5>RAPTOR  |</h5>
+          <h5>RAPTOR VACCUM (RVAC) </h5>
+        </div>
+        <p>The Raptor engine is a reusable methane-oxygen staged-combustion engine that powers the Starship system and has twice the thrust of the Falcon 9 Merlin engine. Starship will be powered by six engines, three Raptor engines, and three Raptor Vacuum (RVac) engines, which are designed for use in the vacuum of space. Super Heavy will be powered by 33 Raptor engines, with 13 in the center and the remaining 20 around the perimeter of the booster’s aft end.</p>
+        <div style="display: flex;justify-content: space-between;">
+          <p>HEIGHT</p>
+          <p>13.1m / 43 ft</p>
+        </div>
+        <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+        <div style="display: flex;justify-content: space-between;">
+          <p>DIAMETER</p>
+          <p>5.2m / 17.1 ft</p>
+        </div>
+        <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+        <div style="display: flex;justify-content: space-between;">
+          <p>THRUST</p>
+          <p>230 tf / 507 klbf</p>
+        </div>
+        <div style="border: 1px solid grey;margin-bottom: 10px;"></div>
+      </div>
+    </div>
+  </div>
+
+
+        <button class="prev" onclick="moveSlide('carousel4', -1)">&#10094;</button>
+        <button class="next" onclick="moveSlide('carousel4', 1)">&#10095;</button>
+        <div class="indicators"></div>
+</div>
+
+<div class="launch-services">
+  <div class="vertical-line"></div>
+  <div>
+    <p style="color: grey;">For information about our lauch service, contact sales@spacex.com</p>
+  </div>
+  <div style="display: flex;gap:20px;">
+    <button class="para-button" style="padding:10px;">DOWNLOAD USER'S GUIDE</button>
+    <button class="para-button" style="padding:10px;">CAPABILITIES AND SERVICES</button>
+  </div>
+</div>
+
+  </div>
+
+   
+
+    <footer>
+        <ul>
+            <li>SPACEX @ 2025</li>
+            <li>PRIVACY POLICY</li>
+            <li>SUPPLIERS</li>
+        </ul>
+    </footer>
+    <script>
+        AOS.init();
+        window.addEventListener('scroll', function () {
+        const nav = document.querySelector('header');
+        const imageContainerHeight = document.querySelector('video').offsetHeight;
+
+        if (window.scrollY > imageContainerHeight) {
+            // Add the 'fixed' class when the user scrolls past the image container
+            nav.classList.add('fixed');
+        } else {
+            // Keep the navbar fixed to the top with a white background when scrolling up
+            if (window.scrollY === 0) {
+                nav.classList.remove('fixed'); // Removes the 'fixed' class at the very top
+            } else {
+                nav.classList.add('fixed');
+            }
+        }
+    });
+
+
+    // const images = document.querySelectorAll(".carousel-images img");
+    //     const prevButton = document.querySelector(".prev");
+    //     const nextButton = document.querySelector(".next");
+    //     const indicatorsContainer = document.querySelector(".indicators");
+    //     const carouselImages = document.querySelector(".carousel-images");
+    //     let index = 0;
+
+    //     function updateCarousel() {
+    //         carouselImages.style.transform = `translateX(${-index * 100}%)`;
+    //         document.querySelectorAll(".indicator").forEach((dot, i) => {
+    //             dot.classList.toggle("active", i === index);
+    //         });
+    //     }
+
+    //     images.forEach((_, i) => {
+    //         const dot = document.createElement("div");
+    //         dot.classList.add("indicator");
+    //         if (i === 0) dot.classList.add("active");
+    //         dot.addEventListener("click", () => {
+    //             index = i;
+    //             updateCarousel();
+    //         });
+    //         indicatorsContainer.appendChild(dot);
+    //     });
+
+    //     prevButton.addEventListener("click", () => {
+    //         index = (index - 1 + images.length) % images.length;
+    //         updateCarousel();
+    //     });
+
+    //     nextButton.addEventListener("click", () => {
+    //         index = (index + 1) % images.length;
+    //         updateCarousel();
+    //     });
+
+    
+    // let currentIndex = 0;
+    //   const slides = document.querySelectorAll(".slide");
+    //   const totalSlides = slides.length;
+    //   const indicatorsContainer = document.querySelector(".indicators");
+
+    //   function updateCarousel() {
+    //     document.querySelector(
+    //       ".carousel-slides"
+    //     ).style.transform = `translateX(-${currentIndex * 100}%)`;
+    //     document.querySelectorAll(".dot").forEach((dot, i) => {
+    //       dot.classList.toggle("active", i === currentIndex);
+    //     });
+    //   }
+
+    //   function moveSlide(step) {
+    //     currentIndex = (currentIndex + step + totalSlides) % totalSlides;
+    //     updateCarousel();
+    //   }
+
+    //   slides.forEach((_, i) => {
+    //     const dot = document.createElement("span");
+    //     dot.classList.add("dot");
+    //     dot.addEventListener("click", () => {
+    //       currentIndex = i;
+    //       updateCarousel();
+    //     });
+    //     indicatorsContainer.appendChild(dot);
+    //   });
+
+    //   updateCarousel();
+
+    function initializeCarousel(carouselId) {
+            const carousel = document.getElementById(carouselId);
+            const slides = carousel.querySelectorAll(".slide");
+            const totalSlides = slides.length;
+            const indicatorsContainer = carousel.querySelector(".indicators");
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                carousel.querySelector(".carousel-slides").style.transform = `translateX(-${currentIndex * 100}%)`;
+                indicatorsContainer.querySelectorAll(".dot").forEach((dot, i) => {
+                    dot.classList.toggle("active", i === currentIndex);
+                });
+            }
+
+            function moveSlide(step) {
+                currentIndex = (currentIndex + step + totalSlides) % totalSlides;
+                updateCarousel();
+            }
+
+            slides.forEach((_, i) => {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                dot.addEventListener("click", () => {
+                    currentIndex = i;
+                    updateCarousel();
+                });
+                indicatorsContainer.appendChild(dot);
+            });
+
+            updateCarousel();
+            carousel.moveSlide = moveSlide;
+        }
+
+        initializeCarousel("carousel1");
+        initializeCarousel("carousel2");
+        initializeCarousel("carousel3");
+        initializeCarousel("carousel4");
+        
+        function moveSlide(carouselId, step) {
+            document.getElementById(carouselId).moveSlide(step);
+        }
+      </script>
+      
+</body>
+</html>
